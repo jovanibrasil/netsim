@@ -1,4 +1,4 @@
-# TRABALHO FINAL DE REDES DE COMPUTADORES I - 2016/2
+# TRABALHO FINAL DE REDES DE COMPUTADORES I
 
 O trabalho consiste em desenvolver um simulador de rede. O simulador deve receber como parâmetros de execução o nome de um arquivo de descrição de topologia (conforme formato especificado) e uma lista de nós. O simulador deve apresentar na saída as mensagens enviadas pelos nós e roteadores da topologia conforme o formato estabelecido, considerando o envio de um pacote ICMP Echo Request do primeiro até o último nó da lista e retornando um pacote ICMP Echo Reply para o primeiro nó da lista. A transferência dos pacotes deve respeitar a topologia da rede definida pela arquivo de descrição de topologia. Se existir um loop na topologia, o roteador que chegar ao TTL igual a zero, enviará uma mensagem ICMP Time Exceeded para o último nó que realizou o envio, e o simulador é encerrado.
 
