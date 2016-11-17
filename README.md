@@ -13,11 +13,11 @@ O trabalho consiste em desenvolver um simulador de rede. O simulador deve recebe
 
 ## Formato de saída
 
-Pacotes ARP Request: \<src\_name\> box \<src\_name\> : ARP - Who has \<dst\_IP\>? Tell \<src\_IP\>; 
-Pacotes ARP Reply: \<src\_name\> => \<dst\_name\> : ARP - \<src\_IP\> is at \<src\_MAC\>;
-Pacotes ICMP Echo Request: \<src\_name\> => \<dst\_name\> : ICMP - Echo request (src=\<src\_IP\> dst=\<dst\_IP\> ttl=\<TTL\>);
-Pacotes ICMP Echo Reply: \<src\_name\> => \<dst\_name\> : ICMP - Echo reply (src=\<src\_IP\> dst=\<dst\_IP\> ttl=\<TTL\>);
-Pacotes ICMP Time Exceeded: \<src\_name\> => \<dst\_name\> : ICMP - Time Exceeded (src=\<src\_IP\> dst=\<dst\_IP\> ttl=\<TTL\>);
+- Pacotes ARP Request: \<src\_name\> box \<src\_name\> : ARP - Who has \<dst\_IP\>? Tell \<src\_IP\>;
+- Pacotes ARP Reply: \<src\_name\> => \<dst\_name\> : ARP - \<src\_IP\> is at \<src\_MAC\>;
+- Pacotes ICMP Echo Request: \<src\_name\> => \<dst\_name\> : ICMP - Echo request (src=\<src\_IP\> dst=\<dst\_IP\> ttl=\<TTL\>);
+- Pacotes ICMP Echo Reply: \<src\_name\> => \<dst\_name\> : ICMP - Echo reply (src=\<src\_IP\> dst=\<dst\_IP\> ttl=\<TTL\>);
+- Pacotes ICMP Time Exceeded: \<src\_name\> => \<dst\_name\> : ICMP - Time Exceeded (src=\<src\_IP\> dst=\<dst\_IP\> ttl=\<TTL\>);
 
 ## Modo de execução do simulador
 
@@ -25,10 +25,10 @@ $ simulador \<topologia\> \<nodo1\> \<nodo2\> \<nodo3\> …
 
 ## Detalhes para construção do simulador:
 
-- TTL inicial dos pacotes IP deve ser igual a 8
-- a topologia poderá apresentar loops de roteamento
-- a lista de nós de entrada pode ter itens repetidos
-- o simulador deve ser executado a partir de um terminal por linha de comando de acordo com o exemplo apresentado - não deve ser necessário utilizar uma IDE para executar o simulador!!!
-- o simulador pode ser implementado em qualquer linguagem
-- a entrada e saída devem respeitar EXATAMENTE os formatos apresentados
-- o formato de saída é baseado na linguagem MsGenny. Sugere-se verificar se a saída está correta através do site https://sverweij.github.io/mscgen\_js. Usar o cabeçalho “wordwraparcs=true,hscale=2.0;” para facilitar a visualização.
+- TTL inicial dos pacotes IP deve ser igual a 8.
+- A topologia poderá apresentar loops de roteamento.
+- A lista de nós de entrada pode ter itens repetidos.
+- O simulador deve ser executado a partir de um terminal por linha de comando de acordo com o exemplo apresentado - não deve ser necessário utilizar uma IDE para executar o simulador!!!
+- O simulador pode ser implementado em qualquer linguagem.
+- A entrada e saída devem respeitar EXATAMENTE os formatos apresentados.
+- O formato de saída é baseado na linguagem MsGenny. Sugere-se verificar se a saída está correta através do site https://sverweij.github.io/mscgen\_js. Usar o cabeçalho “wordwraparcs=true,hscale=2.0;” para facilitar a visualização.
