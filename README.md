@@ -4,11 +4,11 @@ O trabalho consiste em desenvolver um simulador de rede. O simulador deve recebe
 
 ## Formato do arquivo de descrição de topologia
 
-\#NODE 
-<node_name>,<MAC>,<IP/prefix>,<gateway>
-\#ROUTER
+\# NODE 
+\<node\_name\>,\<MAC\>,\<IP/prefix\>,\<gateway\>
+\# ROUTER
 <router_name>,<num_ports>,<MAC0>,<IP0/prefix>,<MAC1>,<IP1/prefix>,<MAC2>,<IP2/prefix> …
-\#ROUTERTABLE
+\# ROUTERTABLE
 <router_name>,<net_dest/prefix>,<nexthop>,<port>
 
 ## Formato de saída
