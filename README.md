@@ -7,21 +7,21 @@ O trabalho consiste em desenvolver um simulador de rede. O simulador deve recebe
 \# NODE 
 \<node\_name\>,\<MAC\>,\<IP/prefix\>,\<gateway\>
 \# ROUTER
-<router_name>,<num_ports>,<MAC0>,<IP0/prefix>,<MAC1>,<IP1/prefix>,<MAC2>,<IP2/prefix> …
+\<router\_name\>,\<num\_ports\>,\<MAC0\>,\<IP0/prefix\>,\<MAC1\>,\<IP1/prefix\>,\<MAC2\>,\<IP2/prefix\> …
 \# ROUTERTABLE
-<router_name>,<net_dest/prefix>,<nexthop>,<port>
+\<router\_name\>,\<net\_dest/prefix\>,\<nexthop\>,\<port\>
 
 ## Formato de saída
 
-Pacotes ARP Request: <src_name> box <src_name> : ARP - Who has <dst_IP>? Tell <src_IP>; 
-Pacotes ARP Reply: <src_name> => <dst_name> : ARP - <src_IP> is at <src_MAC>;
-Pacotes ICMP Echo Request: <src_name> => <dst_name> : ICMP - Echo request (src=<src_IP> dst=<dst_IP> ttl=<TTL>);
-Pacotes ICMP Echo Reply: <src_name> => <dst_name> : ICMP - Echo reply (src=<src_IP> dst=<dst_IP> ttl=<TTL>);
-Pacotes ICMP Time Exceeded: <src_name> => <dst_name> : ICMP - Time Exceeded (src=<src_IP> dst=<dst_IP> ttl=<TTL>);
+Pacotes ARP Request: \<src\_name\> box \<src\_name\> : ARP - Who has \<dst\_IP\>? Tell \<src\_IP\>; 
+Pacotes ARP Reply: \<src\_name\> => \<dst\_name\> : ARP - \<src\_IP\> is at \<src\_MAC\>;
+Pacotes ICMP Echo Request: \<src\_name\> => \<dst\_name\> : ICMP - Echo request (src=\<src\_IP\> dst=\<dst\_IP\> ttl=\<TTL\>);
+Pacotes ICMP Echo Reply: \<src\_name\> => \<dst\_name\> : ICMP - Echo reply (src=\<src\_IP\> dst=\<dst\_IP\> ttl=\<TTL\>);
+Pacotes ICMP Time Exceeded: \<src\_name\> => \<dst\_name\> : ICMP - Time Exceeded (src=\<src\_IP\> dst=\<dst\_IP\> ttl=\<TTL\>);
 
 ## Modo de execução do simulador
 
-$ simulador <topologia> <nodo1> <nodo2> <nodo3> …
+$ simulador \<topologia\> \<nodo1\> \<nodo2\> \<nodo3\> …
 
 ## Detalhes para construção do simulador:
 
@@ -31,4 +31,4 @@ $ simulador <topologia> <nodo1> <nodo2> <nodo3> …
 - o simulador deve ser executado a partir de um terminal por linha de comando de acordo com o exemplo apresentado - não deve ser necessário utilizar uma IDE para executar o simulador!!!
 - o simulador pode ser implementado em qualquer linguagem
 - a entrada e saída devem respeitar EXATAMENTE os formatos apresentados
-- o formato de saída é baseado na linguagem MsGenny. Sugere-se verificar se a saída está correta através do site https://sverweij.github.io/mscgen_js. Usar o cabeçalho “wordwraparcs=true,hscale=2.0;” para facilitar a visualização.
+- o formato de saída é baseado na linguagem MsGenny. Sugere-se verificar se a saída está correta através do site https://sverweij.github.io/mscgen\_js. Usar o cabeçalho “wordwraparcs=true,hscale=2.0;” para facilitar a visualização.
