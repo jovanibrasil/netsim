@@ -5,7 +5,7 @@ n2 => n1 : ARP - 192.168.0.3 is at 00:00:00:00:00:02;
 n1 => n2 : ICMP - Echo request (src=192.168.0.2 dst=192.168.0.3 ttl=8);
 n2 => n1 : ICMP - Echo reply (src=192.168.0.3 dst=192.168.0.2 ttl=8);"
 
-output=$(python Main.py topo1.txt n1 n2)
+output=$(python main.py topo1.txt n1 n2)
 
 # echo $expected_out
 # echo $output
@@ -26,7 +26,7 @@ r1 => n3 : ICMP - Echo request (src=192.168.0.2 dst=192.168.1.2 ttl=7);
 n3 => r1 : ICMP - Echo reply (src=192.168.1.2 dst=192.168.0.2 ttl=8);
 r1 => n1 : ICMP - Echo reply (src=192.168.1.2 dst=192.168.0.2 ttl=7);" 
 
-output=$(python Main.py topo1.txt n1 n3)
+output=$(python main.py topo1.txt n1 n3)
 
 # echo $expected_out
 # echo $output
@@ -57,7 +57,7 @@ r1 box r1 : ARP - Who has 192.168.0.2? Tell 192.168.0.1;
 n1 => r1 : ARP - 192.168.0.2 is at 00:00:00:00:00:01;
 r1 => n1 : ICMP - Echo reply (src=192.168.1.3 dst=192.168.0.2 ttl=7);"
 
-output=$(python Main.py topo1.txt n1 n2 n3 n4)
+output=$(python main.py topo1.txt n1 n2 n3 n4)
 
 # echo $expected_out
 # echo $output
@@ -86,7 +86,7 @@ r1 => n4 : ICMP - Echo request (src=192.168.0.3 dst=192.168.1.3 ttl=7);
 n4 => r1 : ICMP - Echo reply (src=192.168.1.3 dst=192.168.0.2 ttl=8);
 r1 => n1 : ICMP - Echo reply (src=192.168.1.3 dst=192.168.0.2 ttl=7);"
 
-output=$(python Main.py topo1.txt n1 n3 n2 n4)
+output=$(python main.py topo1.txt n1 n3 n2 n4)
 
 # echo $expected_out
 # echo $output
@@ -98,6 +98,6 @@ else
     echo "[x] topo1.txt n1 n3 n2 n4"
 fi
 
-output=$(python Main.py topo3.txt n1 n2)
+output=$(python main.py topo3.txt n1 n2)
 
 exit 0
